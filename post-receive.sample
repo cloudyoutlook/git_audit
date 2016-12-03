@@ -4,20 +4,20 @@ import sys
 import subprocess
 import logging
 
+FORMAT = "%(levelname)s - %(message)s"
+logging.basicConfig(level=logging.DEBUG, filename="git_audit.log",format=FORMAT)
+
 refname = sys.argv[1]
 oldrev = sys.argv[2]
 newrev = sys.argv[3]
 
+logging.debug("ref:"+refname+" from: "+oldrev+" to "+newrev)
+
 short_oldrev=oldrev[:6]
 short_newrev=newrev[:6]
 
-log_messages = []
-
-FORMAT = "%(message)s"
-logging.basicConfig(level=logging.INFO, filename="git_audit.log",format=FORMAT)
-
-def check_commits(short_oldrev,short_newrev,log_messages,logging):
-	commits = subprocess.check_output(["git", "rev-list", short_newrev+".."+short_oldrev])
+def check_commits(short_oldrev,short_newrev):
+	commits = subprocess.check_output(["git", "rev-list", short_oldrev+".."+short_newrev])
 	#The commits are separated by new lines so split and remove the empty last line
 	commit_list=commits.split('\n')[:-1]
 
@@ -26,5 +26,5 @@ def check_commits(short_oldrev,short_newrev,log_messages,logging):
 #		git verify-commit --raw commit
 		logging.info(output)
 
-check_commits(short_oldrev,short_newrev,log_messages,logging)
+check_commits(short_oldrev,short_newrev)
 
