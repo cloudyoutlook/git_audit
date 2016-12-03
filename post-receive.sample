@@ -5,15 +5,18 @@ import subprocess
 
 print 'Argument List:', str(sys.argv)
 
-ref = sys.argv[0]
-oldrev = sys.argv[1]
-newrev = sys.argv[2]
+#refname = sys.argv[0]
+#oldrev = sys.argv[1]
+#newrev = sys.argv[2]
 
-short_oldref=ref[:6]
-short_newref=ref[:6]
+oldrev = "c558f6caa180a07bd4c8e5508244f25d9fade7f2"
+newrev = "ae31e7703975d995b4e0ebcae331b6f466619149"
+
+short_oldrev=oldrev[:6]
+short_newrev=newrev[:6]
 
 commits = subprocess.check_output(["git", "rev-list", short_oldrev+".."+short_newrev])
 commit_list=commits.split('\n')
 
-for commit in commits:
+for commit in commit_list:
 	print commit
