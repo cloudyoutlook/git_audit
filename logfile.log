@@ -1,0 +1,42 @@
+INFO:root:stuff finished
+INFO:root:stuff finished
+INFO:root:stuff finished
+INFO:root:stuff finished
+INFO:root:stuff finished
+INFO:root:stuff finished
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:stuff finished
+INFO:root:[]
+INFO:root:Something'2016-12-03T10:28:00+00:00	7c6313f	PenguinDev	dev@penguinbeam.uk	GPG Result:G	Testing with signature' 
+INFO:root:Something'2016-12-03T10:02:03+00:00	ae31e77	dev	dev@penguinbeam.uk	GPG Result:N	Added a second test commit' 
+INFO:root:stuff finished
+INFO:root:["'2016-12-03T10:28:00+00:00\t7c6313f\tPenguinDev\tdev@penguinbeam.uk\tGPG Result:G\tTesting with signature' ", "'2016-12-03T10:02:03+00:00\tae31e77\tdev\tdev@penguinbeam.uk\tGPG Result:N\tAdded a second test commit' "]
+INFO:root:'2016-12-03T10:28:00+00:00	7c6313f	PenguinDev	dev@penguinbeam.uk	GPG Result:G	Testing with signature' 
+INFO:root:'2016-12-03T10:02:03+00:00	ae31e77	dev	dev@penguinbeam.uk	GPG Result:N	Added a second test commit' 
+INFO:root:stuff finished
+INFO:root:'2016-12-03T10:28:00+00:00	7c6313f	PenguinDev	dev@penguinbeam.uk	GPG Result:G	Testing with signature' 
+INFO:root:'2016-12-03T10:02:03+00:00	ae31e77	dev	dev@penguinbeam.uk	GPG Result:N	Added a second test commit' 
+INFO:root:stuff finished
+'2016-12-03T10:28:00+00:00	7c6313f	PenguinDev	dev@penguinbeam.uk	GPG Result:G	Testing with signature' 
+'2016-12-03T10:02:03+00:00	ae31e77	dev	dev@penguinbeam.uk	GPG Result:N	Added a second test commit' 
+stuff finished
+'2016-12-03T10:28:00+00:00	7c6313f	PenguinDev	dev@penguinbeam.uk	GPG Result:G	Testing with signature' 
+'2016-12-03T10:02:03+00:00	ae31e77	dev	dev@penguinbeam.uk	GPG Result:N	Added a second test commit' 
+stuff finished
+'2016-12-03T10:28:00+00:00	7c6313f	PenguinDev	dev@penguinbeam.uk	GPG Result:G	Testing with signature' 
+'2016-12-03T10:02:03+00:00	ae31e77	dev	dev@penguinbeam.uk	GPG Result:N	Added a second test commit' 

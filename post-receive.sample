@@ -2,21 +2,29 @@
 
 import sys
 import subprocess
+import logging
 
-print 'Argument List:', str(sys.argv)
-
-#refname = sys.argv[0]
-#oldrev = sys.argv[1]
-#newrev = sys.argv[2]
-
-oldrev = "c558f6caa180a07bd4c8e5508244f25d9fade7f2"
-newrev = "ae31e7703975d995b4e0ebcae331b6f466619149"
+refname = sys.argv[1]
+oldrev = sys.argv[2]
+newrev = sys.argv[3]
 
 short_oldrev=oldrev[:6]
 short_newrev=newrev[:6]
 
-commits = subprocess.check_output(["git", "rev-list", short_oldrev+".."+short_newrev])
-commit_list=commits.split('\n')
+log_messages = []
 
-for commit in commit_list:
-	print commit
+FORMAT = "%(message)s"
+logging.basicConfig(level=logging.INFO, filename="git_audit.log",format=FORMAT)
+
+def check_commits(short_oldrev,short_newrev,log_messages,logging):
+	commits = subprocess.check_output(["git", "rev-list", short_newrev+".."+short_oldrev])
+	#The commits are separated by new lines so split and remove the empty last line
+	commit_list=commits.split('\n')[:-1]
+
+	for commit in commit_list:
+		output = subprocess.check_output(["git", "log", "-1", "--pretty=format:'%aI%x09%h%x09%an%x09%ae%x09GPG Result:%G?%x09%s' ", commit])
+#		git verify-commit --raw commit
+		logging.info(output)
+
+check_commits(short_oldrev,short_newrev,log_messages,logging)
+
